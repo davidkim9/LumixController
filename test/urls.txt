@@ -1,0 +1,44 @@
+Initialize protocol:
+http://192.168.54.1/cam.cgi?mode=accctrl&type=req_acc&value=4D454930-0100-1000-8000-F02765BACACE&value2=DMC-CM1
+
+Change mode to record(must set this to take pictures/video)
+http://192.168.54.1/cam.cgi?mode=camcmd&value=recmode
+
+Liveview Stream to port 49473
+http://192.168.54.1/cam.cgi?mode=startstream&value=49473
+http://192.168.54.1/cam.cgi?mode=stopstream
+
+Take a picture
+http://192.168.54.1/cam.cgi?mode=camcmd&value=capture
+http://192.168.54.1/cam.cgi?mode=camcmd&value=capture_cancel
+(not really sure what cancel is for)
+
+Take a video
+http://192.168.54.1/cam.cgi?mode=camcmd&value=video_recstart
+http://192.168.54.1/cam.cgi?mode=camcmd&value=video_recstop
+
+Set mode to playmode(must be set to view images)
+http://192.168.54.1/cam.cgi?mode=camcmd&value=playmode
+http://192.168.54.1/cam.cgi?mode=get_content_info
+
+Get full size image
+http://192.168.54.1:50001/DO1000075.jpg
+http://192.168.54.1:50001/DOxxxxxxx.jpg (Original Size)
+http://192.168.54.1:50001/DLxxxxxxx.jpg (Large Size)
+http://192.168.54.1:50001/DTxxxxxxx.jpg (Thumbnail Size)
+
+
+other stuff
+
+http://192.168.54.1/cam.cgi?mode=getinfo&type=capability
+http://192.168.54.1/cam.cgi?mode=setsetting&type=focal&value=3
+http://192.168.54.1/cam.cgi?mode=getstate
+http://192.168.54.1/cam.cgi?mode=setsetting&type=afmode&value=facedetection
+http://192.168.54.1/cam.cgi?mode=camcmd&value=zoomstop
+
+
+EXAMPLE ON HOW TO TAKE A PICTURE
+  http://192.168.54.1/cam.cgi?mode=accctrl&type=req_acc&value=4D454930-0100-1000-8000-F02765BACACE&value2=DMC-CM1
+  http://192.168.54.1/cam.cgi?mode=camcmd&value=recmode
+  http://192.168.54.1/cam.cgi?mode=camcmd&value=capture
+

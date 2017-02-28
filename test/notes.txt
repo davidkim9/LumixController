@@ -1,0 +1,4 @@
+capture command might not actually capture the photo
+  this can be checked by seeing the image count on the camera
+
+camera might go to sleep, put in recording mode to wake it up
