@@ -1,3 +1,7 @@
+Prerequisites
+=======
+Get node if you haven't already. [Highly recommend nvm](https://github.com/creationix/nvm)
+
 Steps to get this set up to run
 ========
 `npm install`
@@ -12,10 +16,16 @@ Steps to get this running
 6. Remote Shooting ^ View
 7. `npm start`
 
-Compile
+Compile for distribution
 ========
 Use this to build
 `https://github.com/electron-userland/electron-packager`
 
 eg. `electron-packager ./ --platform=darwin --arch=x64`
 eg. `electron-packager ./ --platform=linux --arch=arm`
+
+
+Notes
+========
+The first time connecting to the camera will require the user to accept the incoming connection from this program
+Once hitting "Yes", you will need to restart this program

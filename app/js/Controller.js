@@ -2,7 +2,6 @@
 require("./config");
 var $ = require("jquery");
 var Lumix = require("./Lumix");
-var Log = require("./Log");
 
 var canvas = document.querySelector('#canvas');
 var context = canvas.getContext('2d');
