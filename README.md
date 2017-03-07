@@ -29,3 +29,6 @@ Notes
 ========
 The first time connecting to the camera will require the user to accept the incoming connection from this program
 Once hitting "Yes", you will need to restart this program
+
+You will also need to reset the file number on the camera for this to properly download the photos after taking them.
+If this is not a possibility you may change the file number offset in the config.js file

@@ -5,7 +5,7 @@ var Lumix = require("./Lumix");
 
 var canvas = document.querySelector('#canvas');
 var context = canvas.getContext('2d');
-var previewImageSmall = document.querySelector('#previewImageSmall');
+var previewImageElement = document.querySelector('#previewImage');
 
 class Controller {
   constructor() {
@@ -17,10 +17,9 @@ class Controller {
     this.camera = camera;
 
     this.imageObj = new Image();
-    this.previewImage = new Image();
 
     //Attach events
-    $(".clickMeToCapture").click(()=>this.capture());
+    $(".capture").click(()=>this.capture());
 
     this.render();
 
@@ -62,12 +61,15 @@ class Controller {
           if(err.url){
             console.log("Last taken URL: ", err.url);
           }
+          this.camera.startStream();
+          
           return;
         }
 
         // Save photo
         var previewImageData = data.toString('base64');
-        this.previewImage.src = "data:image/jpg;base64," + previewImageData;
+        previewImageElement.src = "data:image/jpg;base64," + previewImageData;
+        console.log("set img", previewImageElement);
         
         this.camera.startStream();
       }, 3);
